@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>OpenCnC.Net.GameEngine</RootNamespace>
+        <DefineTrace>true</DefineTrace>
+    </PropertyGroup>
+    
+    <Choose>
+        <When Condition="'$(Configuration)' == 'Debug'">
+            <PropertyGroup>
+                <DefineDebug>true</DefineDebug>
+                <DebugSymbols>true</DebugSymbols>
+                <DebugType>full</DebugType>
+                <Optimize>false</Optimize>
+            </PropertyGroup>
+        </When>
+        <When Condition="'$(Configuration)' == 'Release'">
+            <PropertyGroup>
+                <DefineDebug>false</DefineDebug>
+                <DebugSymbols>false</DebugSymbols>
+                <DebugType>portable</DebugType>
+                <Optimize>none</Optimize>
+            </PropertyGroup>
+        </When>
+    </Choose>
+
+</Project>
