@@ -7,6 +7,23 @@
         <RootNamespace>OpenCnC.Net.GameEngine</RootNamespace>
         <DefineTrace>true</DefineTrace>
     </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>0.0.1</Version>
+        <Title>OpenCnC.Net.GameEngine</Title>
+        <Authors>OpenCnC.Net Team &lt;vmatir@outlook.com&gt;</Authors>
+        <Description>The game engine for the OpenCnC.Net project</Description>
+        <Copyright>2025 (c) OpenCnC.Net Team &lt;vmatir@outlook.com&gt;</Copyright>
+        <PackageProjectUrl>https://github.com/OpenCnC-Net</PackageProjectUrl>
+        <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/OpenCnC-Net/GameEngine</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="OpenCnC.Net.Math" Version="0.0.1" />
+    </ItemGroup>
     
     <Choose>
         <When Condition="'$(Configuration)' == 'Debug'">
@@ -22,7 +39,7 @@
                 <DefineDebug>false</DefineDebug>
                 <DebugSymbols>false</DebugSymbols>
                 <DebugType>portable</DebugType>
-                <Optimize>none</Optimize>
+                <Optimize>true</Optimize>
             </PropertyGroup>
         </When>
     </Choose>
